@@ -1,16 +1,13 @@
 {
   "name": "jumpcloud-ui-assignment",
   "version": "1.0.0",
-  "description": "A project that can be used to asses front end developers",
+  "description": "Front end code for JumpCloud's UI Assmentment Project",
   "repository": {
     "type": "git",
-    "url": "git://github.com/TheJumpCloud/jumpcloud-ui-assignment.git"
+    "url": "git://github.com/d-low/jumpcloud-ui-assignment.git"
   },
-  "private": true,
-  "author": "JumpCloud",
-  "bugs": {
-    "url": "https://github.com/TheJumpCloud/jumpcloud-ui-assignment/issues"
-  },
+  "private": false,
+  "author": "JumpCloud and Mike DiLorenzo",
   "scripts": {},
   "dependencies": {
     "body-parser": "^1.15.2",
