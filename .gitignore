@@ -4,3 +4,5 @@ git.log
 .DS_Store
 *.swp
 todo.txt
+public/build
+npm-debug.log

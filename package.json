@@ -8,10 +8,36 @@
   },
   "private": false,
   "author": "JumpCloud and Mike DiLorenzo",
-  "scripts": {},
+  "scripts": {
+    "build-js": "browserify --debug public/js/app.js -o public/build/app.js",
+    "watch-js": "nodemon -e js -w public/js -x 'npm run build-js'",
+    "build-sass": "node-sass public/sass/main.scss public/build/main.css",
+    "watch-sass": "nodemon -e scss -w public/sass -x 'npm run build-sass'",
+    "build": "npm run build-js & npm run build-sass && node server.js",
+    "watch": "npm run watch-js & npm run watch-sass && node server.js",
+    "start": "npm run build"
+  },
   "dependencies": {
+    "babelify": "^5.0.4",
     "body-parser": "^1.15.2",
+    "envify": "^3.4.0",
     "express": "^4.14.0",
-    "underscore": "^1.8.3"
+    "underscore": "^1.8.3",
+    "backbone": "^1.1.2",
+    "jquery": "^2.1.0",
+    "react": "^0.13.3",
+    "underscore": "^1.6.0"
+  },
+  "devDependencies": {
+    "browserify": "^9.0.7",
+    "clean-css": "^3.1.9",
+    "node-sass": "^2.1.1",
+    "uglifyjs": "^2.4.10"
+  },
+  "browserify": {
+    "transform": [
+      "babelify",
+      "envify"
+    ]
   }
 }
