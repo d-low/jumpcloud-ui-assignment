@@ -1,0 +1,21 @@
+{
+  "html": {
+    "brace_style": "end-expand",
+    "indent_size": 2,
+    "indent_inner_html": true,
+    "indent_scripts": "keep",
+    "wrap_attributes": "force",
+    "wrap_line_length": 80
+  },
+  "css": {
+    // TEMP: Disable for SCSS. Waiting on https://github.com/beautify-web/js-beautify/issues/657
+    "allowed_file_extensions": [],
+    "indent_size": 2
+  },
+  "js": {
+    "brace_style": "end-expand",
+    "break_chained_methods": false,
+    "indent_size": 2,
+    "wrap_line_length": 80
+  }
+}
