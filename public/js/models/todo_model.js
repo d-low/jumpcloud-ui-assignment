@@ -10,6 +10,4 @@ var ToDoModel = Backbone.Model.extend({
   }
 });
 
-ToDoApp.Models.ToDoModel = ToDoModel;
-
 module.exports = ToDoModel;

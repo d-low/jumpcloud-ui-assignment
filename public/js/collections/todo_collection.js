@@ -6,6 +6,4 @@ var ToDoCollection = Backbone.Collection.extend({
   url: '/api/todos'
 });
 
-ToDoApp.Collections.ToDoCollection = ToDoCollection;
-
 module.exports = ToDoCollection;

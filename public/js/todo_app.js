@@ -1,25 +1,34 @@
+var Backbone = require('backbone');
+var Router = require('./router');
+var MainView = require('./screens/main/index');
+var ToDoController = require('./controllers/todo_controller');
+
 var ToDoApp = {
-  Collections: {},
-  Models: {},
-  Routers: {},
-  Views: {},
-  router: null,
-
   initialize: function() {
-    // this.router = new Router({
-    //   app: this,
-    //   controllers: this.controllers
-    // });
+    this.Controllers = {
+      todo: new ToDoController({
+        app: this
+      })
+    };
 
-    // this.mainView = new MainView({
-    //   el: $('#app'),
-    //   router: this.router
-    // });
+    this.router = new Router({
+      app: this,
+      controllers: this.Controllers
+    });
+
+    this.mainView = new MainView({
+      el: $('#todo-app'),
+      router: this.router
+    });
+
+    this.showApp();
   },
 
   showApp: function() {
-    // this.mainView.render();
-    // Backbone.history.start({ pushState: true });
+    this.mainView.render();
+    Backbone.history.start({
+      pushState: true
+    });
   }
 };
 
