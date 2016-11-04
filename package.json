@@ -10,11 +10,11 @@
   "author": "JumpCloud and Mike DiLorenzo",
   "scripts": {
     "build-js": "browserify --debug public/js/app.js -o public/build/app.js",
-    "watch-js": "nodemon -e js -w public/js -x 'npm run build-js'",
+    "watch-js": "nodemon --no-notify-update -e js -w public/js -x 'npm run build-js'",
     "build-sass": "node-sass public/sass/main.scss public/build/main.css",
-    "watch-sass": "nodemon -e scss -w public/sass -x 'npm run build-sass'",
-    "build": "npm run build-js & npm run build-sass && node server.js",
-    "watch": "npm run watch-js & npm run watch-sass && node server.js",
+    "watch-sass": "nodemon --no-notify-update -e scss -w public/sass -x 'npm run build-sass'",
+    "build": "npm run build-js & npm run build-sass & node server.js",
+    "watch": "npm run watch-js & npm run watch-sass & node server.js",
     "start": "npm run build"
   },
   "dependencies": {
