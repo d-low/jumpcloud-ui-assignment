@@ -22,7 +22,17 @@ var ToDoListComponent = React.createFactory(
       /* beautify ignore:start */
       return ( 
         <div className="todo-list-container">
-          <h1 className="todo-list-container__header">To Do List</h1> 
+          <h1 className="todo-list__header">To Do List</h1> 
+          <div className="todo-list__add-item">
+            <div className="todo-list-col-left">
+              <input className="todo-list__add-item__input" type="text" placeholder="Enter a new todo" />
+            </div>
+            <div className="todo-list-col-right">
+              <button className="todo-list__add-item__action">
+                Add 
+              </button>
+            </div>
+          </div>
           <ul className="todo-list"> 
             {toDoListItems} 
           </ul> 

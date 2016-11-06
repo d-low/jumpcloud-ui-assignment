@@ -1,6 +1,14 @@
 html { 
   box-sizing: border-box;
-  font-size: 10px;
+  font-size: 6px;
+
+  @media only screen and (min-width: $screen_sm_min) {
+    font-size: 7px;
+  }
+
+  @media only screen and (min-width: $screen_lg_min) {
+    font-size: 10px;
+  }
 }
 
 *, *:before, *:after {
@@ -20,17 +28,33 @@ h1 {
   line-height: 3.5rem;
 }
 
-h2 { 
+button,
+label,
+input[type=checkbox],
+input[type=text] {
+  display: inline-block;
   font-size: 2.5rem;
-  line-height: 2.75rem;
+  line-height: 5rem;
+}
+
+input[type=text] {
+  border: 1px solid $medium_gray;
 }
 
 button {
-  align-items: center;
-  display: flex;
+  display: inline-block;
   border: 1px solid $medium_gray;
-  justify-content: center;
-  padding: 1.575rem;
+  padding: 0 1.5rem 0 1.5rem;
   text-align: center;
   text-decoration: none;
+  transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+
+  &:active {
+    background-color: $light_gray;
+    color: white;
+  }
+
+  &:focus {
+    outline: none;
+  }
 }

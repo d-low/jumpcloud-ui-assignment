@@ -1,49 +1,75 @@
-.todo-list-container__header {
+.todo-list-container {
+  margin: 0 auto;
+
+  @media only screen and (min-width: $screen_md_min) {
+    width: 80%;
+  }
+}
+
+.todo-list__header {
   border-bottom: 1px solid $medium_gray;
   margin-bottom: 1.5rem;
   padding-bottom: 0.75rem;
 }
 
+.todo-list-col-left,
+.todo-list-col-right {
+  vertical-align: top;
+}
+
+.todo-list-col-left {
+  display: inline-block;
+  text-align: left;
+  width: 50%;
+
+  @media only screen and (min-width: $screen_sm_min) {
+    width: 75%
+  }
+}
+
+.todo-list-col-right {
+  display: inline-block;
+  text-align: right;
+  width: 50%;
+
+  @media only screen and (min-width: $screen_sm_min) {
+    width: 25%;
+  }
+}
+
+.todo-list__add-item,
 .todo-list__item {
-  border-bottom: 1px dotted $medium_gray;
-  display: block;
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
 }
 
-.todo-list__item:last-child {
-  border-bottom: 0 none;
+.todo-list__add-item__input {
+  padding: 0 1rem 0 1rem;
+  width: calc(100% - 2px);
 }
 
-.todo-item__name,
+.todo-list__add-item__action,
 .todo-item__action {
-  display: inline-block;
+  min-width: 10rem;
+}
+
+.todo-list__item {
+  border-bottom: 1px dotted $medium_gray;
+  display: block;
+
+  &:last-child {
+    border-bottom: 0 none;
+  }
 }
 
 .todo-item__done {
-  margin: -0.5rem 1rem 0 0;
-  vertical-align: middle;
+  margin: 1.5rem 1rem 0 0;
+  vertical-align: top;
   width: 2rem;
 }
 
-.todo-item__name {
-  margin-right: 2.5%;
-  width: calc(70% - 3rem);
-}
-
-.todo-item__action {
-  border-color: $light_gray;
-  transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
-  width: 10%;
-}
-
-.todo-item__action:active {
-  background-color: $light_gray;
-  color: white;
-}
-
-.todo-item__action:focus {
-  outline: none;
+.todo-item__label {
+  width: calc(100% - 3rem);
 }
 
 .todo-item__action--last {
