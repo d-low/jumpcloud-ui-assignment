@@ -12,7 +12,7 @@ var ToDoListComponent = React.createFactory(
       var toDoListItems = this.props.toDoCollection.map(function(toDoItem) {
         /* beautify ignore:start */
         return (
-          <li className="todo-list-item" key={toDoItem.id}> 
+          <li className="todo-list__item" key={toDoItem.id}> 
             <ToDoListItemComponent toDoItem={toDoItem} />
           </li>
         );
@@ -22,7 +22,7 @@ var ToDoListComponent = React.createFactory(
       /* beautify ignore:start */
       return ( 
         <div className="todo-list-container">
-          <h1>To Do List</h1> 
+          <h1 className="todo-list-container__header">To Do List</h1> 
           <ul className="todo-list"> 
             {toDoListItems} 
           </ul> 

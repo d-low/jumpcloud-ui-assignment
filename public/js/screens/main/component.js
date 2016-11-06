@@ -6,7 +6,7 @@ var MainComponent = React.createFactory(
     render: function() {
       /* beautify ignore:start */
       return (
-        <div id="main-container">
+        <div id="main-container" className="main-container">
         </div>
       );
       /* beautify ignore:end */

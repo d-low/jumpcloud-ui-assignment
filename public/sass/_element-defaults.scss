@@ -1,0 +1,36 @@
+html { 
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body { 
+  background-color: white;
+  color: black;
+  font-family: Arial;
+  font-size: 1.75rem;
+  line-height: 2rem;
+}
+
+h1 { 
+  font-size: 3rem;
+  line-height: 3.5rem;
+}
+
+h2 { 
+  font-size: 2.5rem;
+  line-height: 2.75rem;
+}
+
+button {
+  align-items: center;
+  display: flex;
+  border: 1px solid $medium_gray;
+  justify-content: center;
+  padding: 1.575rem;
+  text-align: center;
+  text-decoration: none;
+}

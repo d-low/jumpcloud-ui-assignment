@@ -1,0 +1,46 @@
+.todo-list-container__header {
+  border-bottom: 1px solid $medium_gray;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+}
+
+.todo-list__item {
+  border-bottom: 1px dotted $medium_gray;
+  display: block;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.todo-list__item:last-child {
+  border-bottom: 0 none;
+}
+
+.todo-item__name,
+.todo-item__action {
+  display: inline-block;
+}
+
+.todo-item__name {
+  margin-right: 2.5%;
+  width: 75%;
+}
+
+.todo-item__action {
+  border-color: $light_gray;
+  transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+  width: 10%;
+}
+
+.todo-item__action:active {
+  background-color: $light_gray;
+  color: white;
+}
+
+.todo-item__action:focus {
+  outline: none;
+}
+
+.todo-item__action--last {
+  @extend .todo-item__action;
+  margin-left: 2.5rem;
+}

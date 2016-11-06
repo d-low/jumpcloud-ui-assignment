@@ -13,10 +13,10 @@ var ToDoListItemComponent = React.createFactory(
 
       /* beautify ignore:start */
       return (
-        <div className={classNames({'todo-item': true, 'done': done})}>
-          <h2>{description}</h2>
-          <button>Complete</button>
-          <button>Delete</button>
+        <div className={classNames({'todo-item': true, 'todo-item--done': done})}>
+          <h2 className="todo-item__name">{description}</h2>
+          <button className="todo-item__action">Complete</button>
+          <button className="todo-item__action--last">Delete</button>
         </div>
       );
       /* beautify ignore:end */
