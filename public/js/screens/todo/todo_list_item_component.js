@@ -14,8 +14,9 @@ var ToDoListItemComponent = React.createFactory(
       /* beautify ignore:start */
       return (
         <div className={classNames({'todo-item': true, 'todo-item--done': done})}>
+          <input className="todo-item__done" defaultChecked={done} type="radio" title="Done?"/> 
           <h2 className="todo-item__name">{description}</h2>
-          <button className="todo-item__action">Complete</button>
+          <button className="todo-item__action">Edit</button>
           <button className="todo-item__action--last">Delete</button>
         </div>
       );

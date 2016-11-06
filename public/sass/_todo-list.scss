@@ -20,9 +20,15 @@
   display: inline-block;
 }
 
+.todo-item__done {
+  margin: -0.5rem 1rem 0 0;
+  vertical-align: middle;
+  width: 2rem;
+}
+
 .todo-item__name {
   margin-right: 2.5%;
-  width: 75%;
+  width: calc(70% - 3rem);
 }
 
 .todo-item__action {
