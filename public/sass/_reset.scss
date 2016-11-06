@@ -94,6 +94,10 @@ textarea {
   overflow: auto;
 }
 
+:focus {
+  outline: none;
+}
+
 .hasLayout, .clearfix {
   *zoom:1;
 }
