@@ -52,7 +52,7 @@
 .todo-item__action {
   min-width: 10rem;
 
-  @media only screen and (min-width: $screen_lg_min) {
+  @media only screen and (min-width: $screen_sm_min) {
     min-width: 11rem;
   }
 }
