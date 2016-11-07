@@ -12,6 +12,10 @@ var ToDoListItemComponent = React.createFactory(
       };
     },
 
+    handleDeleteClicked: function(e) {
+      this.props.toDoItem.destroy();
+    },
+
     handleDoneChanged: function(e) {
       this.setState({
         done: e.target.checked
@@ -39,7 +43,10 @@ var ToDoListItemComponent = React.createFactory(
           </div>
           <div className="todo-list-col-right">
             <button className="todo-item__action">Edit</button>
-            <button className="todo-item__action--last">Delete</button>
+            <button className="todo-item__action--last"
+                    onClick={this.handleDeleteClicked}>
+              Delete
+            </button>
           </div>
         </div>
       );
