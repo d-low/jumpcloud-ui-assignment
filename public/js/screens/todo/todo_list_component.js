@@ -6,7 +6,7 @@ var ToDoListItemComponent = require('./todo_list_item_component');
 var ToDoListComponent = React.createFactory(
   React.createBackboneClass({
     mixins: [
-      React.BackboneMixin('toDoCollection', 'change')
+      React.BackboneMixin('toDoCollection')
     ],
 
     render: function() {
