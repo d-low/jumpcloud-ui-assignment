@@ -33,6 +33,8 @@ var ToDoAddItemComponent = React.createFactory(
         this.props.toDoCollection.create({
           done: false,
           description: this.state.description
+        }, {
+          wait: true
         });
 
         this.setState({
