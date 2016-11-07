@@ -9,7 +9,8 @@
   "private": false,
   "author": "JumpCloud and Mike DiLorenzo",
   "scripts": {
-    "build-js": "browserify --debug public/js/app.js -o public/build/app.js",
+    "lint": "jshint public/js/**.js",
+    "build-js": "npm run lint & browserify --debug public/js/app.js -o public/build/app.js",
     "watch-js": "nodemon --no-notify-update -e js -w public/js -x 'npm run build-js'",
     "build-sass": "node-sass public/sass/main.scss public/build/main.css",
     "watch-sass": "nodemon --no-notify-update -e scss -w public/sass -x 'npm run build-sass'",
@@ -33,6 +34,7 @@
   },
   "devDependencies": {
     "browserify": "^9.0.7",
+    "jshint": "^2.9.4",
     "node-sass": "^2.1.1"
   },
   "browserify": {

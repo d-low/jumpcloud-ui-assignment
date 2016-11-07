@@ -1,3 +1,5 @@
+'use strict';
+
 var ToDoCollection = require('../collections/todo_collection');
 var ToDoModel = require('../models/todo_model');
 var ToDoList = require('../screens/todo/todo_list.js');

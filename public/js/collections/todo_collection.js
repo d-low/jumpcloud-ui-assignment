@@ -1,3 +1,5 @@
+'use strict';
+
 var ToDoApp = require('../todo_app.js');
 var ToDoModel = require('../models/todo_model.js');
 

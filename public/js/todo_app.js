@@ -1,3 +1,5 @@
+'use strict';
+
 var Backbone = require('backbone');
 var Router = require('./router');
 var MainView = require('./screens/main/index');

@@ -1,3 +1,5 @@
+'use strict';
+
 var BaseView = require('../../base_view');
 var MainComponent = require('./component');
 

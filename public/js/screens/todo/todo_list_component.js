@@ -1,3 +1,5 @@
+'use strict';
+
 var React = require('react');
 var ReactBackbone = require('react.backbone');
 var ToDoAddItemComponent = require('./todo_add_item_component');
