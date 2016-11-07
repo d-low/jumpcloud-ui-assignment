@@ -5,18 +5,37 @@ var classNames = require('classnames');
 
 var ToDoListItemComponent = React.createFactory(
   React.createBackboneClass({
-    render: function() {
-      var toDoItem = this.props.toDoItem;
-      var description = toDoItem.get('description');
-      var done = toDoItem.get('done');
-      var id = toDoItem.get('id');
+    getInitialState: function() {
+      return {
+        description: this.props.toDoItem.get('description'),
+        done: this.props.toDoItem.get('done')
+      };
+    },
 
+    handleDoneChanged: function(e) {
+      this.setState({
+        done: e.target.checked
+      });
+      this.props.toDoItem.save({
+        'done': e.target.checked
+      });
+    },
+
+    render: function() {
       /* beautify ignore:start */
       return (
-        <div className={classNames({'todo-item': true, 'todo-item--done': done})}>
+        <div className="todo-item">
           <div className="todo-list-col-left">
-            <input className="todo-item__done" defaultChecked={done} type="checkbox" title="Done?"/> 
-            <label className="todo-item__label">{description}</label>
+            <input checked={this.state.done}
+                   className="todo-item__done" 
+                   onChange={this.handleDoneChanged}
+                   title="Done?"
+                   type="checkbox" /> 
+            <label className={classNames({
+              'todo-item__label': !this.state.done,
+              'todo-item__label--done': this.state.done})}>
+              {this.state.description}
+            </label>
           </div>
           <div className="todo-list-col-right">
             <button className="todo-item__action">Edit</button>

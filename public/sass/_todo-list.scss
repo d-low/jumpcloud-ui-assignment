@@ -72,6 +72,11 @@
   width: calc(100% - 3rem);
 }
 
+.todo-item__label--done {
+  @extend .todo-item__label;
+  text-decoration: line-through;
+}
+
 .todo-item__action--last {
   @extend .todo-item__action;
   margin-left: 2.5rem;
