@@ -12,9 +12,10 @@
     "lint": "jshint public/js/**.js",
     "build-js": "npm run lint & browserify --debug public/js/app.js -o public/build/app.js",
     "watch-js": "nodemon --no-notify-update -e js -w public/js -x 'npm run build-js'",
-    "build-sass": "node-sass --output-style=expanded public/sass/main.scss public/build/main.css",
-    "watch-sass": "nodemon --no-notify-update -e scss -w public/sass -x 'npm run build-sass'",
-    "build": "npm run build-js & npm run build-sass & node server.js",
+    "autoprefix": "postcss -u autoprefixer --autoprefixer.browsers '> 1%, last 2 versions, last 5 Android versions' -r public/build/main.css",
+    "build-sass": "node-sass --output-style expanded public/sass/main.scss public/build/main.css",
+    "watch-sass": "nodemon --no-notify-update -e scss -w public/sass -x 'npm run build-sass & npm run autoprefix'",
+    "build": "npm run build-js & npm run build-sass & npm run autoprefix & node server.js",
     "watch": "npm run watch-js & npm run watch-sass & node server.js",
     "start": "npm run build"
   },
@@ -33,9 +34,11 @@
     "underscore": "^1.6.0"
   },
   "devDependencies": {
+    "autoprefixer": "^6.1.2",
     "browserify": "^9.0.7",
     "jshint": "^2.9.4",
-    "node-sass": "^2.1.1"
+    "node-sass": "^2.1.1",
+    "postcss-cli": "^2.6.0"
   },
   "browserify": {
     "transform": [
