@@ -51,6 +51,10 @@
 .todo-list__add-item__action,
 .todo-item__action {
   min-width: 10rem;
+
+  @media only screen and (min-width: $screen_lg_min) {
+    min-width: 11rem;
+  }
 }
 
 .todo-list__item {
@@ -60,6 +64,32 @@
   &:last-child {
     border-bottom: 0 none;
   }
+}
+
+// TODO: Use animations and opacity instead of simply toggling the display!
+
+.todo-item--edit {
+  .todo-item__edit {
+    display: block;
+  }
+
+  .todo-item__view {
+    display: none;
+  }
+}
+
+.todo-item--view {
+  .todo-item__edit {
+    display: none;
+  }
+
+  .todo-item__view {
+    display: block;
+  }
+}
+
+.todo-item__edit__input {
+  @extend .todo-list__add-item__input;
 }
 
 .todo-item__done {
