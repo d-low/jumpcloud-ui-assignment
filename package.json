@@ -12,7 +12,7 @@
     "lint": "jshint public/js/**.js",
     "build-js": "npm run lint & browserify --debug public/js/app.js -o public/build/app.js",
     "watch-js": "nodemon --no-notify-update -e js -w public/js -x 'npm run build-js'",
-    "build-sass": "node-sass public/sass/main.scss public/build/main.css",
+    "build-sass": "node-sass --output-style=expanded public/sass/main.scss public/build/main.css",
     "watch-sass": "nodemon --no-notify-update -e scss -w public/sass -x 'npm run build-sass'",
     "build": "npm run build-js & npm run build-sass & node server.js",
     "watch": "npm run watch-js & npm run watch-sass & node server.js",
