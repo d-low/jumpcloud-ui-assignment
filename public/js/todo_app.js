@@ -18,6 +18,14 @@ var ToDoApp = {
       controllers: this.Controllers
     });
 
+    // HACK: Add #todo-app if not already in DOM to support Karma testing.
+
+    var $todoApp = $('#todo-app');
+
+    if ($todoApp.length === 0) {
+      $('body').prepend('<div id="todo-app"></div>');
+    }
+
     this.mainView = new MainView({
       el: $('#todo-app'),
       router: this.router
