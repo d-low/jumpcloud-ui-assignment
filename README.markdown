@@ -18,7 +18,7 @@ To run the server, make sure you have `node` and `npm` installed on your machine
 
 2. Run the server:
   ```
-  node server.js
+  npm start
   ```
 
 3. Point browser to:
